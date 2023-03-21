@@ -1,5 +1,11 @@
 package com.model;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class UserData {
     private Integer id;
     private String email;
@@ -17,25 +23,4 @@ public class UserData {
 
     public UserData() {
     }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getFirst_name() {
-        return first_name;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
 }
