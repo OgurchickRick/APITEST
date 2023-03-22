@@ -19,6 +19,7 @@ public class Specifications {
         return new RequestSpecBuilder()
                 .setBaseUri("https://reqres.in")
                 .setContentType(ContentType.JSON)
+                .setAccept(ContentType.JSON)
                 .build();
     }
 
