@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Добавил новых тестов">
+    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Доработка тестов">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/model/Unknown.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.getUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.getUnknown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +110,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
       <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="getUser" />
+      <option name="METHOD_NAME" value="getUnknown" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.getUnknownNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +126,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
       <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="updateUser" />
+      <option name="METHOD_NAME" value="getUnknownNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ReqresTest" />
+        <item itemvalue="JUnit.ReqresTest.getUnknownNotFound" />
+        <item itemvalue="JUnit.ReqresTest.getUnknown" />
         <item itemvalue="JUnit.ReqresTest.deleteUser" />
         <item itemvalue="JUnit.ReqresTest.createUser" />
-        <item itemvalue="JUnit.ReqresTest.updateUser" />
-        <item itemvalue="JUnit.ReqresTest.getUser" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679512574897</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Доработка тестов">
+      <created>1679562002084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679562002084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +197,7 @@
     <MESSAGE value="1-ый тест" />
     <MESSAGE value="Доведение &quot;до ума&quot;" />
     <MESSAGE value="Добавил новых тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил новых тестов" />
+    <MESSAGE value="Доработка тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработка тестов" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.apiTests;
 
+import com.model.Unknown;
 import com.model.User;
 import com.model.UserData;
 import org.hamcrest.Matchers;
@@ -98,5 +99,39 @@ public class ReqresTest {
                 .delete("api/users/2")
                 .then().log().status()
                 .statusCode(204);
+    }
+
+
+    @Test
+    @Order(7)
+    public void getUnknown() {
+        Unknown unknown = given()
+                .spec(requestSpecification())
+                .get("api/unknown/2")
+                .then().log().status()
+                .statusCode(200)
+                .extract().body().jsonPath().getObject("data", Unknown.class);
+        Assert.assertEquals(2, (int) unknown.getId());
+    }
+
+    @Test
+    @Order(8)
+    public void getUnknownList() {
+        given()
+                .spec(requestSpecification())
+                .get("api/unknown")
+                .then().log().status()
+                .statusCode(200);
+    }
+
+    @Test
+    @Order(9)
+    public void getUnknownNotFound() {
+        given()
+                .spec(requestSpecification())
+                .get("/api/unknown/99")
+                .then().log().status()
+                .statusCode(404)
+                .body(Matchers.anything());
     }
 }
