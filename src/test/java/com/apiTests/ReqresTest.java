@@ -8,8 +8,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 
-import java.time.LocalDateTime;
-import java.util.Date;
+
 import java.util.List;
 
 import static com.specification.Specifications.requestSpecification;
@@ -61,13 +60,16 @@ public class ReqresTest {
     @Order(4)
     @DisplayName("Тестирование запроса POST на создание пользователя")
     public void createUser() {
+        User reqBody = new User("Ivan", "God");
         User user = new User("Ivan", "God");
         given()
                 .spec(requestSpecification())
                 .body(user)
                 .post("api/users")
                 .then().log().status()
-                .statusCode(201);
+                .statusCode(201)
+                .extract().body().jsonPath().getObject("", User.class);
+        Assert.assertTrue(user.getName().equals(reqBody.getName()) && user.getJob().equals(reqBody.getJob()));
     }
 
 
@@ -75,13 +77,15 @@ public class ReqresTest {
     @Order(5)
     @DisplayName("Тестирование запроса PUT на изменение пользователя")
     public  void updateUser() {
-        User user = new User("Ivan", "God");
-        given()
+        User reqBody = new User("Ivan", "God");
+        User user = given()
                 .spec(requestSpecification())
-                .body(user)
+                .body(reqBody)
                 .put("api/users/2")
                 .then().log().status()
-                .statusCode(200);
+                .statusCode(200)
+                .extract().body().jsonPath().getObject("", User.class);
+        Assert.assertTrue(user.getName().equals(reqBody.getName()) && user.getJob().equals(reqBody.getJob()));
     }
 
 

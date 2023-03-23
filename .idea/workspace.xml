@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Доведение &quot;до ума&quot;">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/model/User.java" afterDir="false" />
+    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Добавил новых тестов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/specification/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/specification/Specifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,9 +135,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ReqresTest" />
-        <item itemvalue="JUnit.ReqresTest.updateUser" />
         <item itemvalue="JUnit.ReqresTest.deleteUser" />
         <item itemvalue="JUnit.ReqresTest.createUser" />
+        <item itemvalue="JUnit.ReqresTest.updateUser" />
         <item itemvalue="JUnit.ReqresTest.getUser" />
       </list>
     </recent_temporary>
@@ -166,12 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1679411877500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил новых тестов">
+      <created>1679512574897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679512574897</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1-ый тест" />
     <MESSAGE value="Доведение &quot;до ума&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доведение &quot;до ума&quot;" />
+    <MESSAGE value="Добавил новых тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил новых тестов" />
   </component>
 </project>
