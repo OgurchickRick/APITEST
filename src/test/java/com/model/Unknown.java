@@ -1,11 +1,11 @@
 package com.model;
 
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 public class Unknown {
 
     private Integer id;
