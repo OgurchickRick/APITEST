@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Доработка тестов">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/model/Unknown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Unknown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/specification/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/Specifications.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

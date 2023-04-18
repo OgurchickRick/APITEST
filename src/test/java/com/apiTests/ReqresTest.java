@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static com.specification.Specifications.requestSpecification;
+import static specification.Specifications.requestSpecification;
 import static io.restassured.RestAssured.given;
 
 public class ReqresTest {
