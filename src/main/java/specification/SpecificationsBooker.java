@@ -1,6 +1,5 @@
 package specification;
 
-
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -12,19 +11,19 @@ import org.hamcrest.Matchers;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.hamcrest.Matchers.lessThanOrEqualTo;
+public class SpecificationsBooker {
 
-public class Specifications {
-
-    public static RequestSpecification requestSpecification() {
+    public static RequestSpecification requestSpecificationBooker() {
         return new RequestSpecBuilder()
-                .setBaseUri("https://reqres.in")
+                .setBaseUri("https://restful-booker.herokuapp.com")
                 .setContentType(ContentType.JSON)
                 .setAccept(ContentType.JSON)
+                .addCookie("token=abc123")
                 .build();
+
     }
 
-    public static ResponseSpecification responseSpecification() {
+    public static ResponseSpecification responseSpecificationBooker() {
         return new ResponseSpecBuilder()
                 .log(LogDetail.STATUS)
                 .expectContentType(ContentType.JSON)
