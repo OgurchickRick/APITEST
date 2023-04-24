@@ -22,7 +22,7 @@ public class SpecificationsReqres {
                 .build();
     }
 
-    public static ResponseSpecification responseSpecification() {
+    public static ResponseSpecification responseSpecificationReqres() {
         return new ResponseSpecBuilder()
                 .log(LogDetail.STATUS)
                 .expectContentType(ContentType.JSON)

@@ -11,6 +11,7 @@ import java.util.List;
 
 import static specification.SpecificationsReqres.requestSpecificationReqres;
 import static io.restassured.RestAssured.given;
+import static specification.SpecificationsReqres.responseSpecificationReqres;
 
 public class ReqresTest {
 
@@ -19,10 +20,14 @@ public class ReqresTest {
         List<UserData> users = given()
                 .spec(requestSpecificationReqres())
                 .get("/api/users?page=2")
-                .then().log().status()
-                .statusCode(200)
+                .then().spec(responseSpecificationReqres())
                 .extract().body().jsonPath().getList("data", UserData.class);
-        users.forEach(x -> Assert.assertTrue(x.getAvatar().contains(x.getId().toString())));
+        for (UserData user : users) {
+            String avatarUrl = user.getAvatar();
+            Integer userId = user.getId();
+
+            Assert.assertTrue((avatarUrl).contains(userId.toString()));
+        }
     }
 
     @Test(description = "Тестирование запроса GET с несуществующим пользователем")
@@ -41,8 +46,7 @@ public class ReqresTest {
         UserData user = given()
                 .spec(requestSpecificationReqres())
                 .get("api/users/2")
-                .then().log().status()
-                .statusCode(200)
+                .then().spec(responseSpecificationReqres())
                 .extract().body().jsonPath().getObject("data", UserData.class);
         Assert.assertTrue(user.getAvatar().contains(user.getId().toString()));
     }
@@ -69,8 +73,7 @@ public class ReqresTest {
                 .spec(requestSpecificationReqres())
                 .body(reqBody)
                 .put("api/users/2")
-                .then().log().status()
-                .statusCode(200)
+                .then().spec(responseSpecificationReqres())
                 .extract().body().jsonPath().getObject("", User.class);
         Assert.assertTrue(user.getName().equals(reqBody.getName()) && user.getJob().equals(reqBody.getJob()));
     }
@@ -91,8 +94,7 @@ public class ReqresTest {
         Unknown unknown = given()
                 .spec(requestSpecificationReqres())
                 .get("api/unknown/2")
-                .then().log().status()
-                .statusCode(200)
+                .then().spec(responseSpecificationReqres())
                 .extract().body().jsonPath().getObject("data", Unknown.class);
         Assert.assertEquals(2, (int) unknown.getId());
     }
@@ -102,8 +104,7 @@ public class ReqresTest {
         given()
                 .spec(requestSpecificationReqres())
                 .get("api/unknown")
-                .then().log().status()
-                .statusCode(200);
+                .then().spec(responseSpecificationReqres());
     }
 
     @Test

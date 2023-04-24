@@ -40,7 +40,7 @@ public class BookerTest {
                 .post("/booking")
                 .then().spec(responseSpecificationBooker())
                 .extract().body().jsonPath().getObject("booking", Booking.class);
-        Assert.assertTrue(booking.firstname.equals(reqBody.firstname) && booking.lastname.equals(reqBody.lastname));
+        Assert.assertTrue(booking.getFirstname().equals(reqBody.getFirstname()) && booking.getLastname().equals(reqBody.getLastname()));
     }
 
     @Test

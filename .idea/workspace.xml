@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Доработка тестов">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Bookingdates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsBooker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/specification/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,25 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BookerTest.getBookingIds">
-    <configuration name="BookerTest.auth" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="APITEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apiTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
-      <option name="METHOD_NAME" value="auth" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ReqresTest">
     <configuration name="BookerTest.createBooking" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
@@ -103,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookerTest.deleteBooking" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -112,8 +92,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
-      <option name="METHOD_NAME" value="deleteBooking" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.checkAvatarAndIdTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APITEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apiTests" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="METHOD_NAME" value="checkAvatarAndIdTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookerTest.getBookingIds" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.getUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +127,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
-      <option name="METHOD_NAME" value="getBookingIds" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="METHOD_NAME" value="getUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -139,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookerTest.healthCheck" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="com.apiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -148,9 +145,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
-      <option name="METHOD_NAME" value="healthCheck" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -159,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.BookerTest.getBookingIds" />
-        <item itemvalue="TestNG.BookerTest.auth" />
-        <item itemvalue="TestNG.BookerTest.deleteBooking" />
-        <item itemvalue="TestNG.BookerTest.healthCheck" />
+        <item itemvalue="TestNG.ReqresTest" />
+        <item itemvalue="TestNG.ReqresTest.getUser" />
+        <item itemvalue="TestNG.ReqresTest.checkAvatarAndIdTest" />
         <item itemvalue="TestNG.BookerTest.createBooking" />
+        <item itemvalue="TestNG.com.apiTests" />
       </list>
     </recent_temporary>
   </component>
