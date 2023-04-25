@@ -12,6 +12,7 @@ import java.util.List;
 import static specification.SpecificationsReqres.requestSpecificationReqres;
 import static io.restassured.RestAssured.given;
 import static specification.SpecificationsReqres.responseSpecificationReqres;
+import static utils.UserUtils.assertUserEquals;
 
 public class ReqresTest {
 
@@ -20,7 +21,7 @@ public class ReqresTest {
         List<UserData> users = given()
                 .spec(requestSpecificationReqres())
                 .get("/api/users?page=2")
-                .then().spec(responseSpecificationReqres())
+                .then().spec(responseSpecificationReqres(200))
                 .extract().body().jsonPath().getList("data", UserData.class);
         for (UserData user : users) {
             String avatarUrl = user.getAvatar();
@@ -35,8 +36,7 @@ public class ReqresTest {
         given()
                 .spec(requestSpecificationReqres())
                 .get("/api/users/99")
-                .then().log().status()
-                .statusCode(404)
+                .then().spec(responseSpecificationReqres(404))
                 .body(Matchers.anything());
     }
 
@@ -46,7 +46,7 @@ public class ReqresTest {
         UserData user = given()
                 .spec(requestSpecificationReqres())
                 .get("api/users/2")
-                .then().spec(responseSpecificationReqres())
+                .then().spec(responseSpecificationReqres(200))
                 .extract().body().jsonPath().getObject("data", UserData.class);
         Assert.assertTrue(user.getAvatar().contains(user.getId().toString()));
     }
@@ -59,10 +59,9 @@ public class ReqresTest {
                 .spec(requestSpecificationReqres())
                 .body(reqBody)
                 .post("api/users")
-                .then().log().status()
-                .statusCode(201)
+                .then().spec(responseSpecificationReqres(201))
                 .extract().body().jsonPath().getObject("", User.class);
-        Assert.assertTrue(user.getName().equals(reqBody.getName()) && user.getJob().equals(reqBody.getJob()));
+        assertUserEquals(user, reqBody);
     }
 
 
@@ -73,9 +72,9 @@ public class ReqresTest {
                 .spec(requestSpecificationReqres())
                 .body(reqBody)
                 .put("api/users/2")
-                .then().spec(responseSpecificationReqres())
+                .then().spec(responseSpecificationReqres(200))
                 .extract().body().jsonPath().getObject("", User.class);
-        Assert.assertTrue(user.getName().equals(reqBody.getName()) && user.getJob().equals(reqBody.getJob()));
+        assertUserEquals(user, reqBody);
     }
 
 
@@ -94,7 +93,7 @@ public class ReqresTest {
         Unknown unknown = given()
                 .spec(requestSpecificationReqres())
                 .get("api/unknown/2")
-                .then().spec(responseSpecificationReqres())
+                .then().spec(responseSpecificationReqres(200))
                 .extract().body().jsonPath().getObject("data", Unknown.class);
         Assert.assertEquals(2, (int) unknown.getId());
     }
@@ -104,7 +103,8 @@ public class ReqresTest {
         given()
                 .spec(requestSpecificationReqres())
                 .get("api/unknown")
-                .then().spec(responseSpecificationReqres());
+                .then().spec(responseSpecificationReqres(200))
+                .body(Matchers.anything());
     }
 
     @Test
@@ -112,8 +112,7 @@ public class ReqresTest {
         given()
                 .spec(requestSpecificationReqres())
                 .get("/api/unknown/99")
-                .then().log().status()
-                .statusCode(404)
+                .then().spec(responseSpecificationReqres(404))
                 .body(Matchers.anything());
     }
 }

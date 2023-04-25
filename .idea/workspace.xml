@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Доработка тестов">
+    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Перешел на spec">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/UserUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,24 +65,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.ReqresTest">
-    <configuration name="BookerTest.createBooking" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="APITEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apiTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
-      <option name="METHOD_NAME" value="createBooking" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReqresTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
@@ -100,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.checkAvatarAndIdTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.createUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -110,7 +92,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
       <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="checkAvatarAndIdTest" />
+      <option name="METHOD_NAME" value="createUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -136,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.apiTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.getUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -145,7 +127,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="METHOD_NAME" value="getUserNotFound" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqresTest.updateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APITEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apiTests" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -155,10 +157,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ReqresTest" />
+        <item itemvalue="TestNG.ReqresTest.updateUser" />
+        <item itemvalue="TestNG.ReqresTest.getUserNotFound" />
+        <item itemvalue="TestNG.ReqresTest.createUser" />
         <item itemvalue="TestNG.ReqresTest.getUser" />
-        <item itemvalue="TestNG.ReqresTest.checkAvatarAndIdTest" />
-        <item itemvalue="TestNG.BookerTest.createBooking" />
-        <item itemvalue="TestNG.com.apiTests" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680712253379</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Перешел на spec">
+      <created>1682365328418</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682365328418</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +241,7 @@
     <MESSAGE value="Доведение &quot;до ума&quot;" />
     <MESSAGE value="Добавил новых тестов" />
     <MESSAGE value="Доработка тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доработка тестов" />
+    <MESSAGE value="Перешел на spec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перешел на spec" />
   </component>
 </project>
