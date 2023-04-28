@@ -1,8 +1,8 @@
 package com.apiTests;
 
-import model.Unknown;
-import model.User;
-import model.UserData;
+import model.reqresModel.Unknown;
+import model.reqresModel.User;
+import model.reqresModel.UserData;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;

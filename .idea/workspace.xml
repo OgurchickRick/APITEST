@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Перешел на spec">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/UserUtils.java" afterDir="false" />
+    <list default="true" id="d6b62306-320c-4c16-9762-c0347ae1f6cc" name="Changes" comment="Чутка исправил тесты и spec">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsReqres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/bookerModel/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Bookingdates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/bookerModel/Bookingdates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Unknown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/reqresModel/Unknown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/reqresModel/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/reqresModel/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/specification/SpecificationsBooker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/specification/SpecificationsBooker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/BookerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apiTests/ReqresTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/model/Unknown.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/model/reqresModel/Unknown.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,8 +69,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ReqresTest">
-    <configuration name="ReqresTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.BookerTest.getBookingIds">
+    <configuration name="BookerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +79,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -82,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.createUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BookerTest.createToken" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +96,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="createUser" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
+      <option name="METHOD_NAME" value="createToken" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.getUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BookerTest.getBookingIds" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +114,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="getUser" />
+      <option name="MAIN_CLASS_NAME" value="com.apiTests.BookerTest" />
+      <option name="METHOD_NAME" value="getBookingIds" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.getUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReqresTest.deleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
@@ -128,7 +133,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apiTests" />
       <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="getUserNotFound" />
+      <option name="METHOD_NAME" value="deleteUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -136,17 +141,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReqresTest.updateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TokenUtils.createToken" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APITEST" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apiTests.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.apiTests" />
-      <option name="MAIN_CLASS_NAME" value="com.apiTests.ReqresTest" />
-      <option name="METHOD_NAME" value="updateUser" />
+      <option name="PACKAGE_NAME" value="utils" />
+      <option name="MAIN_CLASS_NAME" value="utils.TokenUtils" />
+      <option name="METHOD_NAME" value="createToken" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -156,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ReqresTest" />
-        <item itemvalue="TestNG.ReqresTest.updateUser" />
-        <item itemvalue="TestNG.ReqresTest.getUserNotFound" />
-        <item itemvalue="TestNG.ReqresTest.createUser" />
-        <item itemvalue="TestNG.ReqresTest.getUser" />
+        <item itemvalue="TestNG.BookerTest.getBookingIds" />
+        <item itemvalue="TestNG.TokenUtils.createToken" />
+        <item itemvalue="TestNG.BookerTest.createToken" />
+        <item itemvalue="TestNG.BookerTest" />
+        <item itemvalue="TestNG.ReqresTest.deleteUser" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682365328418</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Чутка исправил тесты и spec">
+      <created>1682442840267</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442840267</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +254,7 @@
     <MESSAGE value="Добавил новых тестов" />
     <MESSAGE value="Доработка тестов" />
     <MESSAGE value="Перешел на spec" />
-    <option name="LAST_COMMIT_MESSAGE" value="Перешел на spec" />
+    <MESSAGE value="Чутка исправил тесты и spec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Чутка исправил тесты и spec" />
   </component>
 </project>

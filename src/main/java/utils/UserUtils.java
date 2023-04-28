@@ -1,6 +1,6 @@
 package utils;
 
-import model.User;
+import model.reqresModel.User;
 import org.testng.Assert;
 
 public class UserUtils {

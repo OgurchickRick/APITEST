@@ -1,24 +1,30 @@
 package com.apiTests;
 
-import model.Bookingdates;
-import model.Booking;
+import io.restassured.response.Response;
+import model.bookerModel.Bookingdates;
+import model.bookerModel.Booking;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static specification.SpecificationsBooker.requestSpecificationBooker;
 import static specification.SpecificationsBooker.responseSpecificationBooker;
+import static utils.BookingUtils.assertBookingEquals;
 
 public class BookerTest {
 
 
     @Test(description = "Тестриование запроса GET, возвращает идентификаторы всех бронирований")
     public void  getBookingIds() {
-        given()
+        Response response = given()
                 .spec(requestSpecificationBooker())
                 .get("/booking")
-                .then().log().status()
-                .statusCode(200);
+                .then().spec(responseSpecificationBooker(200))
+                .extract().response();
+        List<Integer> bookingIds = response.jsonPath().getList("bookingid");
+        Assert.assertFalse(bookingIds.isEmpty());
     }
 
     @Test
@@ -26,8 +32,7 @@ public class BookerTest {
         given()
                 .spec(requestSpecificationBooker())
                 .get("/booking/1")
-                .then().log().status()
-                .statusCode(200);
+                .then().spec(responseSpecificationBooker(200));
     }
 
     @Test(description = "Тестирование запроса POST на добавление бронирования")
@@ -38,9 +43,9 @@ public class BookerTest {
                 .spec(requestSpecificationBooker())
                 .body(reqBody)
                 .post("/booking")
-                .then().spec(responseSpecificationBooker())
+                .then().spec(responseSpecificationBooker(200))
                 .extract().body().jsonPath().getObject("booking", Booking.class);
-        Assert.assertTrue(booking.getFirstname().equals(reqBody.getFirstname()) && booking.getLastname().equals(reqBody.getLastname()));
+        assertBookingEquals(booking, reqBody);
     }
 
     @Test
@@ -51,9 +56,9 @@ public class BookerTest {
                 .spec(requestSpecificationBooker())
                 .body(reqBody)
                 .post("/booking/1")
-                .then().spec(responseSpecificationBooker())
+                .then().spec(responseSpecificationBooker(200))
                 .extract().body().jsonPath().getObject("", Booking.class);
-        Assert.assertTrue(booking.firstname.equals(reqBody.firstname) && booking.lastname.equals(reqBody.lastname));
+        assertBookingEquals(booking, reqBody);
     }
 
     @Test
@@ -61,7 +66,7 @@ public class BookerTest {
         given()
                 .spec(requestSpecificationBooker())
                 .delete("booker/1")
-                .then().spec(responseSpecificationBooker());
+                .then().spec(responseSpecificationBooker(200));
     }
 
     @Test
